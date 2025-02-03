@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seConnectDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblConnectors">
+    <Key>
+      <PropertyRef Name="connectorId" />
+    </Key>
+    <Property Name="connectorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="connectorName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="createdDate" Type="date" />
+    <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblIntegrations">
+    <Key>
+      <PropertyRef Name="integrationId" />
+    </Key>
+    <Property Name="integrationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="integrationName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="connector1" Type="int" Nullable="false" />
+    <Property Name="connector2" Type="int" Nullable="false" />
+    <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="createdDate" Type="date" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="modifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="modifiedDate" Type="date" />
+  </EntityType>
+  <EntityType Name="tblUserIntegrations">
+    <Key>
+      <PropertyRef Name="userIntegrationId" />
+    </Key>
+    <Property Name="userIntegrationId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="integrationId" Type="int" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="createdDate" Type="date" />
+    <Property Name="modifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="modifiedDate" Type="date" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblUsers">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fname" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="lname" Type="nvarchar" MaxLength="100" />
+    <Property Name="email" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="userPassword" Type="nvarchar" MaxLength="12" />
+    <Property Name="company" Type="nvarchar" MaxLength="100" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="createddate" Type="datetime" />
+    <Property Name="modifieddate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="seConnectDataModelStoreContainer">
+    <EntitySet Name="tblConnectors" EntityType="Self.tblConnectors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblIntegrations" EntityType="Self.tblIntegrations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserIntegrations" EntityType="Self.tblUserIntegrations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

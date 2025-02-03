@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seConnectDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Connector">
+    <Key>
+      <PropertyRef Name="connectorId" />
+    </Key>
+    <Property Name="connectorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="connectorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="0" />
+    <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Integration">
+    <Key>
+      <PropertyRef Name="integrationId" />
+    </Key>
+    <Property Name="integrationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="integrationName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="connector1" Type="Int32" Nullable="false" />
+    <Property Name="connector2" Type="Int32" Nullable="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdDate" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="modifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="modifiedDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="UserIntegration">
+    <Key>
+      <PropertyRef Name="userIntegrationId" />
+    </Key>
+    <Property Name="userIntegrationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="integrationId" Type="Int32" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdDate" Type="DateTime" Precision="0" />
+    <Property Name="modifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="modifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="jobtitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createddate" Type="DateTime" Precision="3" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Connectors" EntityType="seConnectDataModel.Connector" />
+    <EntitySet Name="Integrations" EntityType="seConnectDataModel.Integration" />
+    <EntitySet Name="UserIntegrations" EntityType="seConnectDataModel.UserIntegration" />
+    <EntitySet Name="Users" EntityType="seConnectDataModel.User" />
+  </EntityContainer>
+</Schema>

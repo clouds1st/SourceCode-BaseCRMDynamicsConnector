@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="seConnectDataModelStoreContainer" CdmEntityContainer="dbEntities">
+    <EntitySetMapping Name="Connectors">
+      <EntityTypeMapping TypeName="seConnectDataModel.Connector">
+        <MappingFragment StoreEntitySet="tblConnectors">
+          <ScalarProperty Name="connectorId" ColumnName="connectorId" />
+          <ScalarProperty Name="connectorName" ColumnName="connectorName" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Integrations">
+      <EntityTypeMapping TypeName="seConnectDataModel.Integration">
+        <MappingFragment StoreEntitySet="tblIntegrations">
+          <ScalarProperty Name="integrationId" ColumnName="integrationId" />
+          <ScalarProperty Name="integrationName" ColumnName="integrationName" />
+          <ScalarProperty Name="connector1" ColumnName="connector1" />
+          <ScalarProperty Name="connector2" ColumnName="connector2" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
+          <ScalarProperty Name="modifiedDate" ColumnName="modifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserIntegrations">
+      <EntityTypeMapping TypeName="seConnectDataModel.UserIntegration">
+        <MappingFragment StoreEntitySet="tblUserIntegrations">
+          <ScalarProperty Name="userIntegrationId" ColumnName="userIntegrationId" />
+          <ScalarProperty Name="integrationId" ColumnName="integrationId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
+          <ScalarProperty Name="modifiedDate" ColumnName="modifiedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="seConnectDataModel.User">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

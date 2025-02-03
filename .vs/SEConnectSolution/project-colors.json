@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "07d1c353-4626-4d20-a804-531517bcf3f5": {
+      "ProjectGuid": "07d1c353-4626-4d20-a804-531517bcf3f5",
+      "DisplayName": "SEConnect.Web",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

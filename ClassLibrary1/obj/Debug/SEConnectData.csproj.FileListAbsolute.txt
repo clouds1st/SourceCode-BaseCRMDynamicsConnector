@@ -1,0 +1,11 @@
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\bin\Debug\EntityFramework.dll
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\bin\Debug\EntityFramework.xml
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\obj\Debug\SEConnectData.csproj.CoreCompileInputs.cache
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\obj\Debug\SEConnectData.csproj.CopyComplete
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Projects\SEConnect\SourceCode\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

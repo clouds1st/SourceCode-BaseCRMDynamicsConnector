@@ -1,0 +1,5 @@
+C:\Projects\SEConnect\SourceCode\SEConnect.BAL\bin\Debug\SEConnect.BAL.dll
+C:\Projects\SEConnect\SourceCode\SEConnect.BAL\bin\Debug\SEConnect.BAL.pdb
+C:\Projects\SEConnect\SourceCode\SEConnect.BAL\obj\Debug\SEConnect.BAL.csproj.CoreCompileInputs.cache
+C:\Projects\SEConnect\SourceCode\SEConnect.BAL\obj\Debug\SEConnect.BAL.dll
+C:\Projects\SEConnect\SourceCode\SEConnect.BAL\obj\Debug\SEConnect.BAL.pdb

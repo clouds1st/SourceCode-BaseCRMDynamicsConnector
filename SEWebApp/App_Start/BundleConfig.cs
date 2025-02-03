@@ -18,11 +18,18 @@ namespace TaskWebApp
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                       "~/Scripts/data.js",
                       "~/Scripts/respond.js"));
-
+                
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/default.css",
+                      "~/Content/dashboard.css",
+                     
+                       "~/Content/page.css",
+                      "~/Content/jquery-ui-theme.css",
+                      "~/Content/styles.css")); 
         }
     }
 }
